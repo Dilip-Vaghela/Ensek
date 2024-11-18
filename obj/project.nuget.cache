@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Giu4gyIvzdUvEfZ9eIpreycJd8XF6FUD3PKwwm7LykaqxQ5opBHt9zE4YnGFZ9IOs0MEgFiK2mr9ILXpUVSYOg==",
+  "dgSpecHash": "xLdRA4yc0jo1x+l39HySlNMzT6EcZmqs236bJviPpVT13tbwdmIT6clexEn8Dp8mK6e+BXi72+pDw4hJSCh2Jg==",
   "success": true,
   "projectFilePath": "C:\\Users\\DilipVaghela\\RiderProjects\\TestProject2\\EnsekSelenium\\EnsekSelenium.csproj",
   "expectedPackageFiles": [
@@ -16,6 +16,8 @@
     "C:\\Users\\DilipVaghela\\.nuget\\packages\\nunit\\3.13.3\\nunit.3.13.3.nupkg.sha512",
     "C:\\Users\\DilipVaghela\\.nuget\\packages\\nunit.analyzers\\3.6.1\\nunit.analyzers.3.6.1.nupkg.sha512",
     "C:\\Users\\DilipVaghela\\.nuget\\packages\\nunit3testadapter\\4.2.1\\nunit3testadapter.4.2.1.nupkg.sha512",
+    "C:\\Users\\DilipVaghela\\.nuget\\packages\\selenium.support\\4.26.1\\selenium.support.4.26.1.nupkg.sha512",
+    "C:\\Users\\DilipVaghela\\.nuget\\packages\\selenium.webdriver\\4.26.1\\selenium.webdriver.4.26.1.nupkg.sha512",
     "C:\\Users\\DilipVaghela\\.nuget\\packages\\system.reflection.metadata\\1.6.0\\system.reflection.metadata.1.6.0.nupkg.sha512"
   ],
   "logs": []
