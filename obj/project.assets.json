@@ -991,11 +991,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DilipVaghela\\RiderProjects\\TestProject2\\TestProject2\\TestProject2.csproj",
-      "projectName": "TestProject2",
-      "projectPath": "C:\\Users\\DilipVaghela\\RiderProjects\\TestProject2\\TestProject2\\TestProject2.csproj",
+      "projectUniqueName": "C:\\Users\\DilipVaghela\\RiderProjects\\TestProject2\\EnsekSelenium\\EnsekSelenium.csproj",
+      "projectName": "EnsekSelenium",
+      "projectPath": "C:\\Users\\DilipVaghela\\RiderProjects\\TestProject2\\EnsekSelenium\\EnsekSelenium.csproj",
       "packagesPath": "C:\\Users\\DilipVaghela\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DilipVaghela\\RiderProjects\\TestProject2\\TestProject2\\obj\\",
+      "outputPath": "C:\\Users\\DilipVaghela\\RiderProjects\\TestProject2\\EnsekSelenium\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\DilipVaghela\\AppData\\Roaming\\NuGet\\NuGet.Config"
