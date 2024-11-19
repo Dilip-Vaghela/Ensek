@@ -25,23 +25,16 @@ namespace TestProject2.Tests;
 //Nunit attributes
 [Parallelizable(ParallelScope.All)]
 [FixtureLifeCycle(LifeCycle.InstancePerTestCase)]
-public class TestBaseDesktop
+public class TestBaseDesktop(string profile, string browser)
 {
-    private readonly string _profile;
-    private readonly string _browser;
     public IWebDriver WebDriver;
+    public const string BaseUrl = "https://ensekautomationcandidatetest.azurewebsites.net";
 
-
-    public TestBaseDesktop(string profile, string browser)
-    {
-        this._profile = profile;
-        this._browser = browser;
-    }
 
     [SetUp]
     public void Setup()
     {
-        WebDriver = new DriverHelpers().CreateDriver(_profile, _browser) ?? throw new InvalidOperationException();
+        WebDriver = new DriverHelpers().CreateDriver(profile, browser) ?? throw new InvalidOperationException();
         WebDriver.Manage().Window.Maximize();
     }
 

@@ -3,6 +3,8 @@ using NUnit.Framework.Interfaces;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using System.Diagnostics.CodeAnalysis;
+using FluentAssertions;
+using SeleniumExtras.WaitHelpers;
 
 namespace TestProject2.Helper
 
@@ -335,9 +337,15 @@ namespace TestProject2.Helper
         {
             FluentWaitForElementTobeDisplayed(element);
             FluentWaitForElementTobeEnabled(element);
-            WaitUntilJsReady();
-            WaitUntilJQueryReady();
-            Wait(2);
+            //WaitUntilJsReady();
+            //WaitUntilJQueryReady();
+            Wait(1);
+        }
+
+        public IWebElement WaitForElement(By element)
+        {
+            WaitForReady(element);
+            return _webDriver.FindElement(element);
         }
 
         public void FluentWaitForElementTobeDisplayed(By element)
@@ -454,5 +462,29 @@ namespace TestProject2.Helper
                 return false;
             });
         }
+
+        public void WaitForPageUrl(string path)
+        {
+            int delay = 3;
+            DefaultWait<IWebDriver?> fluentWait = new DefaultWait<IWebDriver?>(_webDriver);
+            fluentWait.Timeout = TimeSpan.FromMinutes(delay);
+            fluentWait.PollingInterval = TimeSpan.FromMilliseconds(250);
+            fluentWait.IgnoreExceptionTypes(typeof(NoSuchElementException));
+            fluentWait.IgnoreExceptionTypes(typeof(StaleElementReferenceException));
+
+            try
+            {
+                fluentWait.Until(driver =>
+                    {
+                        return fluentWait.Until(ExpectedConditions.UrlContains(path));
+                    }
+                );
+            }
+            catch (WebDriverTimeoutException)
+            {
+                Assert.Fail($"Failed to wait for URL [{path}] to be enabled for [{delay}] mintues]");
+            }
+        }
+      
     }
 }
