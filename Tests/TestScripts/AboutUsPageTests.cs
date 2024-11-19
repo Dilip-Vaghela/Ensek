@@ -5,11 +5,15 @@ using TestProject2.Tests.PageSteps;
 
 namespace TestProject2.Tests.TestScripts;
 
-public class AboutUsPageTests(string profile, string browser) : TestBaseDesktop(profile, browser)
+public class AboutUsPageTests : TestBaseDesktop
 {
-    private SeleniumHelper? _browser;
-    private AboutUsSteps? _aboutUsSteps;
-    
+    private SeleniumHelper _browser;
+    private AboutUsSteps _aboutUsSteps;
+
+    public AboutUsPageTests(string profile, string browser) : base(profile, browser)
+    {
+    }
+
     [Test,
      Description("Test Case – Ensek | Header | CTAs"),
      TestCase("Home", BaseUrl + "/"),

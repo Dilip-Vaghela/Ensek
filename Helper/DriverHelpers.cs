@@ -13,9 +13,9 @@ public class DriverHelpers
     }
 
     public static bool AreYouBrowserstackdriver = false;
-    private IWebDriver? _webDriver;
+    private IWebDriver _webDriver;
 
-    public IWebDriver? CreateDriver(string profile, string browser)
+    public IWebDriver CreateDriver(string profile, string browser)
     {
         if (profile.Equals("Browserstack"))
         {

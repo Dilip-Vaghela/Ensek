@@ -19,7 +19,7 @@ namespace TestProject2.Helper
             _webDriver = driver;
         }
 
-        private static bool IsNotNull([NotNullWhen(true)] object? obj) => obj != null;
+        private static bool IsNotNull([NotNullWhen(true)] object obj) => obj != null;
 
         public void Quit()
         {
@@ -45,12 +45,12 @@ namespace TestProject2.Helper
 
         public void GetScreenShot()
         {
-            string? fileName = TestContext.CurrentContext.Test.MethodName;
-            string? presentDate = DateTime.Now.ToString("MMddyyyyHHmmss");
-            string? screenshotLocation = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            string fileName = TestContext.CurrentContext.Test.MethodName;
+            string presentDate = DateTime.Now.ToString("MMddyyyyHHmmss");
+            string screenshotLocation = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             if (IsNotNull(screenshotLocation))
             {
-                string? pngLocation = Path.Combine(screenshotLocation,
+                string pngLocation = Path.Combine(screenshotLocation,
                     "Utilities/Screenshots/" + fileName + presentDate + ".png");
                 Screenshot screenshot = ((ITakesScreenshot)_webDriver).GetScreenshot();
                 screenshot.SaveAsFile(pngLocation);
@@ -84,7 +84,7 @@ namespace TestProject2.Helper
             }
         }
 
-        public IWebDriver? GetDriver
+        public IWebDriver GetDriver
         {
             get { return _webDriver; }
         }
@@ -351,7 +351,7 @@ namespace TestProject2.Helper
         public void FluentWaitForElementTobeDisplayed(By element)
         {
             int delay = 3;
-            DefaultWait<IWebDriver?> fluentWait = new DefaultWait<IWebDriver?>(_webDriver);
+            DefaultWait<IWebDriver> fluentWait = new DefaultWait<IWebDriver>(_webDriver);
             fluentWait.Timeout = TimeSpan.FromMinutes(delay);
             fluentWait.PollingInterval = TimeSpan.FromMilliseconds(250);
             fluentWait.IgnoreExceptionTypes(typeof(NoSuchElementException));
@@ -374,7 +374,7 @@ namespace TestProject2.Helper
         public void FluentWaitForElementTobeEnabled(By element)
         {
             int delay = 3;
-            DefaultWait<IWebDriver?> fluentWait = new DefaultWait<IWebDriver?>(_webDriver);
+            DefaultWait<IWebDriver> fluentWait = new DefaultWait<IWebDriver>(_webDriver);
             fluentWait.Timeout = TimeSpan.FromMinutes(delay);
             fluentWait.PollingInterval = TimeSpan.FromMilliseconds(250);
             fluentWait.IgnoreExceptionTypes(typeof(NoSuchElementException));
@@ -397,7 +397,7 @@ namespace TestProject2.Helper
         public void WaitUntilJsReady()
         {
             int delay = 3;
-            DefaultWait<IWebDriver?> fluentWait = new DefaultWait<IWebDriver?>(_webDriver);
+            DefaultWait<IWebDriver> fluentWait = new DefaultWait<IWebDriver>(_webDriver);
             fluentWait.Timeout = TimeSpan.FromMinutes(delay);
             fluentWait.PollingInterval = TimeSpan.FromMilliseconds(250);
             fluentWait.IgnoreExceptionTypes(typeof(NoSuchElementException));
@@ -437,7 +437,7 @@ namespace TestProject2.Helper
         public void WaitUntilJQueryLoad()
         {
             int delay = 3;
-            DefaultWait<IWebDriver?> fluentWait = new DefaultWait<IWebDriver?>(_webDriver);
+            DefaultWait<IWebDriver> fluentWait = new DefaultWait<IWebDriver>(_webDriver);
             fluentWait.Timeout = TimeSpan.FromMinutes(delay);
             fluentWait.PollingInterval = TimeSpan.FromMilliseconds(250);
             fluentWait.IgnoreExceptionTypes(typeof(NoSuchElementException));
@@ -468,13 +468,12 @@ namespace TestProject2.Helper
             WebDriverWait explicitWait = new WebDriverWait(_webDriver, TimeSpan.FromSeconds(30.0));
             try
             {
-                 explicitWait.Until(ExpectedConditions.UrlToBe(path));
+                explicitWait.Until(ExpectedConditions.UrlToBe(path));
             }
             catch (WebDriverTimeoutException)
             {
                 Assert.Fail($"Failed to wait for URL [{path}]");
             }
         }
-      
     }
 }
