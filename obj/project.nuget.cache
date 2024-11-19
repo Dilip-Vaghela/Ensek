@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Giu4gyIvzdUvEfZ9eIpreycJd8XF6FUD3PKwwm7LykaqxQ5opBHt9zE4YnGFZ9IOs0MEgFiK2mr9ILXpUVSYOg==",
+  "dgSpecHash": "gTAkmTzrjVbfrlf+XNm1chzGsWrnKngPxDn2aEGW7WDl2XF7a0cIfIBbbW80f77NKf1pA4LR2eS1UrdmfJ3E1w==",
   "success": true,
   "projectFilePath": "C:\\Users\\DilipVaghela\\RiderProjects\\TestProject2\\EnsekSelenium\\EnsekSelenium.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DilipVaghela\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",
+    "C:\\Users\\DilipVaghela\\.nuget\\packages\\dotnetseleniumextras.waithelpers\\3.11.0\\dotnetseleniumextras.waithelpers.3.11.0.nupkg.sha512",
+    "C:\\Users\\DilipVaghela\\.nuget\\packages\\fluentassertions\\6.12.2\\fluentassertions.6.12.2.nupkg.sha512",
     "C:\\Users\\DilipVaghela\\.nuget\\packages\\microsoft.codecoverage\\17.6.0\\microsoft.codecoverage.17.6.0.nupkg.sha512",
     "C:\\Users\\DilipVaghela\\.nuget\\packages\\microsoft.net.test.sdk\\17.6.0\\microsoft.net.test.sdk.17.6.0.nupkg.sha512",
     "C:\\Users\\DilipVaghela\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
@@ -16,7 +18,11 @@
     "C:\\Users\\DilipVaghela\\.nuget\\packages\\nunit\\3.13.3\\nunit.3.13.3.nupkg.sha512",
     "C:\\Users\\DilipVaghela\\.nuget\\packages\\nunit.analyzers\\3.6.1\\nunit.analyzers.3.6.1.nupkg.sha512",
     "C:\\Users\\DilipVaghela\\.nuget\\packages\\nunit3testadapter\\4.2.1\\nunit3testadapter.4.2.1.nupkg.sha512",
-    "C:\\Users\\DilipVaghela\\.nuget\\packages\\system.reflection.metadata\\1.6.0\\system.reflection.metadata.1.6.0.nupkg.sha512"
+    "C:\\Users\\DilipVaghela\\.nuget\\packages\\selenium.support\\4.26.1\\selenium.support.4.26.1.nupkg.sha512",
+    "C:\\Users\\DilipVaghela\\.nuget\\packages\\selenium.webdriver\\4.26.1\\selenium.webdriver.4.26.1.nupkg.sha512",
+    "C:\\Users\\DilipVaghela\\.nuget\\packages\\system.configuration.configurationmanager\\4.4.0\\system.configuration.configurationmanager.4.4.0.nupkg.sha512",
+    "C:\\Users\\DilipVaghela\\.nuget\\packages\\system.reflection.metadata\\1.6.0\\system.reflection.metadata.1.6.0.nupkg.sha512",
+    "C:\\Users\\DilipVaghela\\.nuget\\packages\\system.security.cryptography.protecteddata\\4.4.0\\system.security.cryptography.protecteddata.4.4.0.nupkg.sha512"
   ],
   "logs": []
 }
