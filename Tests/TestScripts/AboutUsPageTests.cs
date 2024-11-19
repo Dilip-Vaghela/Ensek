@@ -12,7 +12,7 @@ public class AboutUsPageTests(string profile, string browser) : TestBaseDesktop(
     
     [Test,
      Description("Test Case – Ensek | Header | CTAs"),
-     TestCase("Home", BaseUrl),
+     TestCase("Home", BaseUrl + "/"),
      TestCase("About", BaseUrl + "/Home/About"),
      TestCase("Contact", BaseUrl + "/Home/Contact"),
      TestCase("Register", BaseUrl + "/Account/Register"),

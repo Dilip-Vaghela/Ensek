@@ -23,8 +23,8 @@ namespace TestProject2.Helper
 
         public void Quit()
         {
-            CheckTestCaseResult();
-            CheckTestCaseResultForBrowserStack();
+            //CheckTestCaseResult();
+            //CheckTestCaseResultForBrowserStack();
             _webDriver.Quit();
         }
 
@@ -465,24 +465,14 @@ namespace TestProject2.Helper
 
         public void WaitForPageUrl(string path)
         {
-            int delay = 3;
-            DefaultWait<IWebDriver?> fluentWait = new DefaultWait<IWebDriver?>(_webDriver);
-            fluentWait.Timeout = TimeSpan.FromMinutes(delay);
-            fluentWait.PollingInterval = TimeSpan.FromMilliseconds(250);
-            fluentWait.IgnoreExceptionTypes(typeof(NoSuchElementException));
-            fluentWait.IgnoreExceptionTypes(typeof(StaleElementReferenceException));
-
+            WebDriverWait explicitWait = new WebDriverWait(_webDriver, TimeSpan.FromSeconds(30.0));
             try
             {
-                fluentWait.Until(driver =>
-                    {
-                        return fluentWait.Until(ExpectedConditions.UrlContains(path));
-                    }
-                );
+                 explicitWait.Until(ExpectedConditions.UrlToBe(path));
             }
             catch (WebDriverTimeoutException)
             {
-                Assert.Fail($"Failed to wait for URL [{path}] to be enabled for [{delay}] mintues]");
+                Assert.Fail($"Failed to wait for URL [{path}]");
             }
         }
       
